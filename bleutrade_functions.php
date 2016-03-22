@@ -125,7 +125,7 @@ function get_candles($market, $period='30m', $count=1000, $last_hours=24) {
   $params = '?market=' . $market;
   $params .= '&period=' . $period;
   $params .= '&count=' . $count;
-  $params .= '&last_hours=' . $last_hours;
+  $params .= '&lasthours=' . $last_hours;
   $query = $command . $params;
   $result = make_public_api_call($query);
   
