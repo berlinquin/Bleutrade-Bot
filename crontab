@@ -1,0 +1,16 @@
+#This example crontab would be used to analyze 4, 8, and 12 hour intervals regularly
+#every 24 hours.
+
+#This creates a fresh activity.txt file at the start of the day
+0 0 * * * php -f ~/trade_alg/create_file.php
+
+#This runs Main.php on the correct intervals at the correct time
+2 0 * * * php -f ~/trade_alg/Main.php 4h 8h 12h | tee activity.txt
+2 4 * * * php -f ~/trade_alg/Main.php 4h | tee activity.txt
+2 8 * * * php -f ~/trade_alg/Main.php 4h 8h | tee activity.txt
+2 12 * * * php -f ~/trade_alg/Main.php 4h 12h | tee activity.txt
+2 16 * * * php -f ~/trade_alg/Main.php 4h 8h | tee activity.txt
+2 18 * * * php -f ~/trade_alg/Main.php 4h | tee activity.txt
+
+#This emails the contents of activity.txt to your email at the end of the day
+58 21 * * * php -f ~/trade_alg/report.php
