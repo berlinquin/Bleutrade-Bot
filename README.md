@@ -1,5 +1,5 @@
 # BleuTrade-Bot
-These PHP scripts provide the tools to customize and run your own algorithmic trading bot for use with the Bleutrade exchange. A big thank-you to beefviper, who wrote the bleutrade_function.php script to provide php wrappers for all of the Bleutrade API methods! beefviper's work made this project a lot easier.
+These PHP scripts provide the tools to customize and run your own algorithmic trading bot for use with the Bleutrade exchange. A big thank-you to beefviper, who wrote the bleutrade_function.php script to provide php wrappers for all of the Bleutrade API methods! Here is a link to the original repository: https://github.com/beefviper/BleuTrade-API-PHP
 
 #Candle.php
 The Candle.php class (located in classes directory) models a candle taken from a market. Candles contain data regarding a commodity's opening, high, low, and closing price over a certain interval of time. 
